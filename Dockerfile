@@ -22,6 +22,6 @@ RUN python -m pip install -r requirements.txt
 
 RUN chown -R root:root /app
 
-RUN python main.py collectstatic --noinput
+RUN python /inventory/manage.py collectstatic --noinput
 
 CMD uwsgi --http=0.0.0.0:80 --module=backend.wsgi
