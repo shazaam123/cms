@@ -41,6 +41,10 @@ CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+DJANGOCMS_SNIPPET_SEARCH = True
+
+DJANGOCMS_SNIPPET_THEME = 'github'
+DJANGOCMS_SNIPPET_MODE = 'html'
 # Application definition
 
 INSTALLED_APPS = [
@@ -58,6 +62,8 @@ INSTALLED_APPS = [
     "djangocms_text_ckeditor",
     "djangocms_alias",
     "djangocms_versioning",
+    "djangocms_file",
+    "djangocms_snippet",
     "sekizai",
     "treebeard",
     "parler",
@@ -119,6 +125,10 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+DJANGOCMS_FILE_TEMPLATES = [
+    ('feature', _('Feature Version')),
 ]
 
 THUMBNAIL_PROCESSORS = (
