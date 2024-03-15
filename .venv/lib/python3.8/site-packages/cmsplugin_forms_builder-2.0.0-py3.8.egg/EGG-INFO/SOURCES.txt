@@ -1,0 +1,8 @@
+README.md
+setup.py
+cmsplugin_forms_builder.egg-info/PKG-INFO
+cmsplugin_forms_builder.egg-info/SOURCES.txt
+cmsplugin_forms_builder.egg-info/dependency_links.txt
+cmsplugin_forms_builder.egg-info/not-zip-safe
+cmsplugin_forms_builder.egg-info/requires.txt
+cmsplugin_forms_builder.egg-info/top_level.txt
