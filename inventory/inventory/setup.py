@@ -1,32 +1,56 @@
 #!/usr/bin/env python
-
 from setuptools import find_packages, setup
 
-# setup the project
+from djangocms_link import __version__
+
+
+REQUIREMENTS = [
+    'django-cms>=3.7',
+    'django-filer>=1.7',
+    'djangocms-attributes-field>=1',
+]
+
+
+CLASSIFIERS = [
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Web Environment',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Framework :: Django',
+    'Framework :: Django :: 3.2',
+    'Framework :: Django :: 4.0',
+    'Framework :: Django CMS',
+    'Framework :: Django CMS :: 3.9',
+    'Framework :: Django CMS :: 3.10',
+    'Framework :: Django CMS :: 3.11',
+    'Topic :: Internet :: WWW/HTTP',
+    'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+    'Topic :: Software Development',
+    'Topic :: Software Development :: Libraries',
+]
+
+
 setup(
-    name='cmsplugin-forms-builder',
-    version='2.0.0',
-    description='django-cms plugin for cmsplugin-forms-builder',
-    long_description=open('README.md').read(),
-    author='Nimbis Services, Inc.',
-    author_email='devops@nimbisservices.com',
-    url='https://github.com/nimbis/cmsplugin-forms-builder/',
-    packages=find_packages(exclude=["tests", ]),
-    license='BSD',
-    classifiers=[
-        'Development Status :: 4 - Beta',
-        'Environment :: Web Environment',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Framework :: Django',
-    ],
+    name='djangocms-link',
+    version=__version__,
+    author='Divio AG',
+    author_email='info@divio.ch',
+    maintainer='Django CMS Association and contributors',
+    maintainer_email='info@django-cms.org',
+    url='https://github.com/django-cms/djangocms-link',
+    license='BSD-3-Clause',
+    description='Adds a link plugin to django CMS',
+    long_description=open('README.rst').read(),
+    packages=find_packages(),
     include_package_data=True,
-    install_requires=[
-        'Django>=2.0, <2.3',
-        'django-cms>=3.3.1',
-        'django-forms-builder',
-    ],
-    zip_safe=False
+    zip_safe=False,
+    install_requires=REQUIREMENTS,
+    classifiers=CLASSIFIERS,
+    test_suite='tests.settings.run',
 )

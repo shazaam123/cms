@@ -1,0 +1,8 @@
+README.rst
+setup.py
+djangocms_link.egg-info/PKG-INFO
+djangocms_link.egg-info/SOURCES.txt
+djangocms_link.egg-info/dependency_links.txt
+djangocms_link.egg-info/not-zip-safe
+djangocms_link.egg-info/requires.txt
+djangocms_link.egg-info/top_level.txt
