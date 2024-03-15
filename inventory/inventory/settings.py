@@ -178,7 +178,29 @@ LANGUAGE_CODE = "en"
 
 LANGUAGES = [
     ("en", _("English")),
-    # Add additional languages here
+    ("fr", _("French")),
+    ("es", _("Spanish")),
+    ("de", _("German")),
+    ("it", _("Italian")),
+    ("ja", _("Japanese")),
+    ("ko", _("Korean")),
+    ("ru", _("Russian")),
+    ("zh-hans", _("Simplified Chinese")),
+    ("zh-hant", _("Traditional Chinese")),
+    ("pt-br", _("Brazilian Portuguese")),
+    ("pl", _("Polish")),
+    ("nl", _("Dutch")),
+    ("tr", _("Turkish")),
+    ("sv", _("Swedish")),
+    ("uk", _("Ukrainian")),
+    ("vi", _("Vietnamese")),
+    ("fa", _("Persian")),
+    ("hi", _("Hindi")),
+    ("bn", _("Bengali")),
+    ("mr", _("Marathi")),
+    ("ta", _("Tamil")),
+    ("te", _("Telugu")),
+    ("th", _("Thai"))
 ]
 
 TIME_ZONE = "UTC"
