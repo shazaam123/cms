@@ -19,8 +19,8 @@ jobs:
 
     - uses: reiddraper/prettier-please@78c10c34c7c783e9ff98d49a6aaa9b015f4381f2
       with:
-        git-user.name: jobet1995
-        git-user.email: jobetcasquejo221@gmail.com
+        git-user.name: 
+        git-user.email: 
 
     - uses: itsvinayak/pylint-and-format@v1.1
       with:
