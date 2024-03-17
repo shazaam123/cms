@@ -26,13 +26,14 @@ from django.views.generic.base import RedirectView
 
 
 urlpatterns = i18n_patterns(
-    path('', RedirectView.as_view(url='/admin/login/'), name='home'),
-    path("en/jsi18n/", JavaScriptCatalog.as_view(), name="javascript-catalog"),
-    path("en/admin/", admin.site.urls),
-    path("en/filer/", include("filer.urls")),
-    path("en/", include("cms.urls")),
-    path("en/media/", serve, {"document_root": settings.MEDIA_ROOT}),
-    path('admin/login/', admin.site.urls)
+  path('', RedirectView.as_view(url='/admin/login/'), name='home'),
+  path("en/jsi18n/", JavaScriptCatalog.as_view(), name="javascript-catalog"),
+  path("en/admin/", admin.site.urls),
+  path("en/filer/", include("filer.urls")),
+  path("en/", include("cms.urls")),
+  path("en/media/", serve, {"document_root": settings.MEDIA_ROOT}),
+  path('admin/login/', admin.site.urls),
+  path("", include("djangocms_page_sitemap.sitemap_urls")
 )
 
 if settings.DEBUG:
