@@ -48,6 +48,15 @@ DJANGOCMS_SNIPPET_SEARCH = True
 DJANGOCMS_SNIPPET_THEME = 'github'
 DJANGOCMS_SNIPPET_MODE = 'html'
 
+DJANGOCMS_STYLE_CHOICES = ['container', 'content', 'teaser']
+
+DJANGOCMS_STYLE_TEMPLATES = [
+    ('feature', _('Feature')),
+]
+
+DJANGOCMS_STYLE_TAGS = ['div', 'article', 'section', 'header', 'footer',
+  'h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+
 CMS_ENABLE_UPDATE_CHECK = True
 
 CMS_UPDATE_CHECK_TYPE = ('minor')
@@ -68,8 +77,10 @@ INSTALLED_APPS = [
     # CMS base apps
   "cms",
   "menus",
+  "djangocms_attributes_field",
   "djangocms_text_ckeditor",
   "djangocms_alias",
+  "djangocms_style",
   "djangocms_versioning",
   "djangocms_file",
   "djangocms_snippet",
