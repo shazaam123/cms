@@ -1,2 +1,11 @@
-{# Replace this with your base template #}
-{% extends "bootstrap5/base.html" %}
+{% extends "base.html" %}
+{% load i18n static sekizai_tags %}
+
+{% block title %}{% trans "Inventory" %}{% endblock %}
+
+{% block content %}
+ <div class="modules">
+   {% block modules_content %}
+   {% endblock modules_content %}
+ </div>
+{% endblock content %}
