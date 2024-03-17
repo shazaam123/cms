@@ -33,6 +33,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['pnrdp6-8000.csb.app', '34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev']
 
+ALDRYN_BOILERPLATE_NAME='bootstrap3'
+
 CSRF_FAILUER_VIEW = 'myapp.views.my_csrf_failure_view'
 
 CSRF_TRUSTED_SECURE = True
@@ -72,6 +74,7 @@ INSTALLED_APPS = [
   "djangocms_file",
   "djangocms_snippet",
   "djangocms_icon",
+  "django_jsonfield_backport",
   "sekizai",
   "treebeard",
   "parler",
@@ -120,17 +123,23 @@ TEMPLATES = [
         "DIRS": [
             os.path.join(BASE_DIR, "inventory", "templates"),
         ],
-        "APP_DIRS": True,
-        "OPTIONS": {
+        "APP_DIRS": False,
+          "OPTIONS": {
             "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.template.context_processors.i18n",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
-                "sekizai.context_processors.sekizai",
-                "cms.context_processors.cms_settings",
+              "django.template.context_processors.debug",
+              "django.template.context_processors.request",
+              "django.template.context_processors.i18n",
+              "django.contrib.auth.context_processors.auth",
+              "django.contrib.messages.context_processors.messages",
+              "sekizai.context_processors.sekizai",
+              "cms.context_processors.cms_settings",
+              "aldryn_boilerplates.context_processors.boilerplate"
             ],
+          "loaders": [
+            "django.template.loaders.filesystem.Loader",
+            "aldryn_boilerplates.template_loaders.AppDirectoriesLoader",
+            "django.template.loaders.app_directories.Loader"
+          ]
         },
     },
 ]

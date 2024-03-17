@@ -25,6 +25,7 @@ from django.conf.urls.static import static
 from django.views.generic.base import RedirectView
 
 
+
 urlpatterns = i18n_patterns(
   path('', RedirectView.as_view(url='/admin/login/'), name='home'),
   path("en/jsi18n/", JavaScriptCatalog.as_view(), name="javascript-catalog"),
@@ -34,7 +35,7 @@ urlpatterns = i18n_patterns(
   path("en/media/", serve, {"document_root": settings.MEDIA_ROOT}),
   path("en/admin/logout/", admin.site.urls),
   path('admin/login/', admin.site.urls),
-  path("", include("djangocms_page_sitemap.sitemap_urls"))
+  path("", include("djangocms_page_sitemap.sitemap_urls")),
 )
 
 if settings.DEBUG:
