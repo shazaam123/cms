@@ -48,10 +48,39 @@ DJANGOCMS_SNIPPET_SEARCH = True
 DJANGOCMS_SNIPPET_THEME = 'github'
 DJANGOCMS_SNIPPET_MODE = 'html'
 
+DJANGOCMS_ICON_TEMPLATES = [
+    ('svg', 'SVG template'),
+]
+
 DJANGOCMS_STYLE_CHOICES = ['container', 'content', 'teaser']
 
 DJANGOCMS_STYLE_TEMPLATES = [
     ('feature', _('Feature')),
+]
+
+DJANGOCMS_ICON_TEMPLATES = [
+    ('svg', 'SVG template'),
+]
+
+DJANGOCMS_ICON_SETS = [
+  ('fontawesome5regular', 'far', 'Font Awesome 5 Regular', 'lastest'),
+  ('fontawesome5solid', 'fas', 'Font Awesome 5 Solid', 'lastest'),
+  ('fontawesome5brands', 'fab', 'Font Awesome 5 Brands', 'lastest'),
+  ('elusiveicon', 'el', 'Elusive Icons'),
+  ('flagicon', 'flag-icon', 'Flag Icons'),
+  ('fontawesome5regular', 'far', 'Font Awesome 5 Regular'),
+  ('fontawesome5solid', 'fas', 'Font Awesome 5 Solid'),
+  ('fontawesome5brands', 'fab', 'Font Awesome 5 Brands'),
+  ('fontawesome5light', 'fal', 'Font Awesome 5 Light', '5.3.1_pro'),
+  ('glyphicon', 'glyphicon', 'Glyphicons'),
+  ('ionicon', 'ion', 'Ionicons Icons'),
+  ('mapicon', 'map-icon', 'Map Icons'),
+  ('materialdesign', 'zmdi', 'Material Design'),
+  ('octicon', 'octicon', 'Octicons'),
+  ('typicon', 'typcn', 'Typicons'),
+  ('weathericon', 'wi', 'Weather Icons'),
+  ('fontawesome4', 'fa', 'Font Awesome 4', '4.0.0'),
+  ('fontawesome5light', 'fal', 'Font Awesome 5 Light', '5.3.1_pro'),
 ]
 
 DJANGOCMS_STYLE_TAGS = ['div', 'article', 'section', 'header', 'footer',
