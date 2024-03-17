@@ -33,7 +33,7 @@ urlpatterns = i18n_patterns(
   path("en/", include("cms.urls")),
   path("en/media/", serve, {"document_root": settings.MEDIA_ROOT}),
   path('admin/login/', admin.site.urls),
-  path("", include("djangocms_page_sitemap.sitemap_urls")
+  path("", include("djangocms_page_sitemap.sitemap_urls"))
 )
 
 if settings.DEBUG:
