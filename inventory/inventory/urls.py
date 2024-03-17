@@ -15,8 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.conf import settings
 from django.urls import include, path
+from django.conf import settings
 from django.contrib import admin
 from django.views.i18n import JavaScriptCatalog
 from django.views.static import serve
@@ -24,14 +24,15 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.views.generic.base import RedirectView
 
+
 urlpatterns = i18n_patterns(
-  path('', RedirectView.as_view(url='/admin/login/'), name='home'),
-  path("en/jsi18n/", JavaScriptCatalog.as_view(), name="javascript-catalog"),
-  path("en/admin/", admin.site.urls),
-  path("en/filer/", include("filer.urls")),
-  path("en/", include("cms.urls")),
-  path("en/media/", serve, {"document_root": settings.MEDIA_ROOT}),
-  path('admin/login/', admin.site.urls)
+    path('', RedirectView.as_view(url='/admin/login/'), name='home'),
+    path("en/jsi18n/", JavaScriptCatalog.as_view(), name="javascript-catalog"),
+    path("en/admin/", admin.site.urls),
+    path("en/filer/", include("filer.urls")),
+    path("en/", include("cms.urls")),
+    path("en/media/", serve, {"document_root": settings.MEDIA_ROOT}),
+    path('admin/login/', admin.site.urls)
 )
 
 if settings.DEBUG:

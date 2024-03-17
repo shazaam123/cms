@@ -37,7 +37,7 @@ CSRF_FAILUER_VIEW = 'myapp.views.my_csrf_failure_view'
 
 CSRF_TRUSTED_SECURE = True
 
-CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:3000/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/']
+CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:3000/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     "djangocms_versioning",
     "djangocms_file",
     "djangocms_snippet",
+    "djangocms_icon",
     "sekizai",
     "treebeard",
     "parler",
@@ -130,6 +131,34 @@ TEMPLATES = [
 DJANGOCMS_FILE_TEMPLATES = [
     ('feature', _('Feature Version')),
 ]
+
+DJANGOCMS_ICON_TEMPLATES = [
+    ('svg', 'SVG template'),
+]
+
+DJANGOCMS_ICON_SETS = [
+  ('fontawesome5regular', 'far', 'Font Awesome 5 Regular', 'lastest'),
+  ('fontawesome5solid', 'fas', 'Font Awesome 5 Solid', 'lastest'),
+  ('fontawesome5brands', 'fab', 'Font Awesome 5 Brands', 'lastest'),
+  ('elusiveicon', 'el', 'Elusive Icons'),
+  ('flagicon', 'flag-icon', 'Flag Icons'),
+  ('fontawesome5regular', 'far', 'Font Awesome 5 Regular'),
+  ('fontawesome5solid', 'fas', 'Font Awesome 5 Solid'),
+  ('fontawesome5brands', 'fab', 'Font Awesome 5 Brands'),
+  ('fontawesome5light', 'fal', 'Font Awesome 5 Light', '5.3.1_pro'),
+  ('glyphicon', 'glyphicon', 'Glyphicons'),
+  ('ionicon', 'ion', 'Ionicons Icons'),
+  ('mapicon', 'map-icon', 'Map Icons'),
+  ('materialdesign', 'zmdi', 'Material Design'),
+  ('octicon', 'octicon', 'Octicons'),
+  ('typicon', 'typcn', 'Typicons'),
+  ('weathericon', 'wi', 'Weather Icons'),
+]
+
+DJANGOCMS_PICTURE_TEMPLATES = [
+    ('background', _('Background image')),
+]
+
 
 THUMBNAIL_PROCESSORS = (
     "easy_thumbnails.processors.colorspace",
@@ -227,6 +256,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 # This is a django CMS 4 template
 
 CMS_CONFIRM_VERSION4 = True
+
+ROOT_URLCONF = "inventory.urls"
 
 # django CMS requires the site framework
 # https://docs.django-cms.org/en/release-4.1.x/how_to/multi-site.html
