@@ -16,4 +16,9 @@ deploymentTarget = "cloudrun"
 
 [[ports]]
 localPort = 8000
-externalPort = 3000
+externalPort = 8080
+exposeLocalhost = true
+
+[auth]
+pageEnabled = false
+buttonEnabled = false

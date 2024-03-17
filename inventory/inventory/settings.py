@@ -31,13 +31,13 @@ SECRET_KEY = "django-insecure-5d@gwyyhvg-uf=z2x5ics55hm=^&#=px+l-i@49=(&)o473bn(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pnrdp6-8000.csb.app']
+ALLOWED_HOSTS = ['pnrdp6-8000.csb.app', '34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev']
 
 CSRF_FAILUER_VIEW = 'myapp.views.my_csrf_failure_view'
 
 CSRF_TRUSTED_SECURE = True
 
-CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app']
+CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:3000/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -138,6 +138,8 @@ THUMBNAIL_PROCESSORS = (
     "easy_thumbnails.processors.filters",
 )
 
+META_SITE_PROTOCOL = 'https'
+META_USE_SITES = True
 WSGI_APPLICATION = "inventory.wsgi.application"
 
 
