@@ -37,7 +37,7 @@ CSRF_FAILUER_VIEW = 'myapp.views.my_csrf_failure_view'
 
 CSRF_TRUSTED_SECURE = True
 
-CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:3000/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/']
+CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:3000/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -45,11 +45,16 @@ DJANGOCMS_SNIPPET_SEARCH = True
 
 DJANGOCMS_SNIPPET_THEME = 'github'
 DJANGOCMS_SNIPPET_MODE = 'html'
+
+CMS_ENABLE_UPDATE_CHECK = True
+
+CMS_UPDATE_CHECK_TYPE = ('minor')
 # Application definition
 
 INSTALLED_APPS = [
-  "djangocms_admin_style",
+  "aldryn_boilerplates",
   "django.contrib.admin",
+  "djangocms_admin_style",
   "django.contrib.auth",
   "django.contrib.contenttypes",
   "django.contrib.sessions",
