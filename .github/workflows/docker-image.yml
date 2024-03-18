@@ -20,27 +20,7 @@ jobs:
     - uses: itsvinayak/pylint-and-format@v1.1
       with:
         filename: 
-
-    - uses: DataDog/datadog-static-analyzer-github-action@v1.0.7
-      with:
-        dd_api_key: # default is 
-        # Your Datadog Application key used to authenticate requests.
-        dd_app_key: # default is 
-        # The service you want your results tagged with.
-        dd_service: # default is 
-        # The environment you want your results tagged with.
-        dd_env: # optional, default is none
-        # The Datadog site. For example, users in the EU may want to set datadoghq.eu.
-        dd_site: # optional, default is datadoghq.com
-        # Set the number of CPUs used to by the analyzer.
-        cpu_count: # optional, default is 2
-        # Get the execution time statistics for analyzed files.
-        enable_performance_statistics: # optional, default is false
-        # Lets the analyzer print additional logs useful for debugging.
-        debug: # optional, default is no
-        # The subdirectory path the analysis should be limited to.
-        subdirectory: # optional, default is 
-
+      
     - uses: Somfic/cleanupcode-action@1.1.1
       with:
         solution:
@@ -57,3 +37,10 @@ jobs:
         OPENAI_API_KEY: 
         # The OpenAI model to use for code review
         OPENAI_API_MODEL: # optional, default is gpt-4-0314
+
+    - name: Code coverage-reporter
+      uses: tj-actions/coverage-reporter@v5
+      with:
+       token: # default is ${{ github.token }}
+       # Specify a coverage command to run the test.
+       coverage-command: 
