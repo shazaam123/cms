@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag inventory:$(date +%s)
 
-    - uses: uses: creyD/prettier_action@31355f8eef017f8aeba2e0bc09d8502b13dbbad1
+    - uses: creyD/prettier_action@31355f8eef017f8aeba2e0bc09d8502b13dbbad1
       with: 
         commit_message: # optional, default is Prettified Code!
         commit_description: # optional, default is 
