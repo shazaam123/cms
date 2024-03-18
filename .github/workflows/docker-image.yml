@@ -25,19 +25,6 @@ jobs:
       with:
         solution:
 
-    - uses: authzed/action-testserver@v3
-      with:
-        version:
-
-    - uses: suitedaces/ai-pull-request-reviewer@alpha
-      with:
-        # GitHub Token for authentication
-        GITHUB_TOKEN: 
-        # OpenAI API Key for accessing AI models
-        OPENAI_API_KEY: 
-        # The OpenAI model to use for code review
-        OPENAI_API_MODEL: # optional, default is gpt-4-0314
-
     - name: Code coverage-reporter
       uses: tj-actions/coverage-reporter@v5
       with:
