@@ -36,6 +36,15 @@ urlpatterns = i18n_patterns(
   path("en/admin/logout/", admin.site.urls),
   path('admin/login/', admin.site.urls),
   path("", include("djangocms_page_sitemap.sitemap_urls")),
+  path('en/admin/cms/placeholder/copy-plugins/', admin.site.urls, name='cms_placeholder_copy_plugins'),
+  path('en/admin/cms/placeholder/add-plugin/', admin.site.urls, name='cms_placeholder_add_plugin'),
+  path('en/admin/cms/placeholder/edit-plugin/([0-9]+)/', admin.site.urls, name='cms_placeholder_edit_plugin'),
+  path('en/admin/cms/placeholder/delete-plugin/([0-9]+)/', admin.site.urls, name='cms_placeholder_delete_plugin'),
+  path('en/admin/cms/placeholder/clear-placeholder/([0-9]+)/', admin.site.urls, name='cms_placeholder_clear_placeholder'),
+  path('en/admin/cms/placeholder/move-plugin/', admin.site.urls, name='cms_placeholder_move_plugin'),
+  path('en/admin/cms/placeholder/object/([0-9]+)/edit/([0-9]+)/', admin.site.urls, name='cms_placeholder_render_object_edit'),
+  path('en/admin/cms/placeholder/object/([0-9]+)/structure/([0-9]+)/', admin.site.urls, name='cms_placeholder_render_object_structure'),
+  path('en/admin/cms/placeholder/object/([0-9]+)/preview/([0-9]+)/', admin.site.urls, name='cms_placeholder_render_object_preview')
 )
 
 if settings.DEBUG:
