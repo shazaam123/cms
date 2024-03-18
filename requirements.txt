@@ -17,3 +17,4 @@ djangocms-versioning
 djangocms-file==3.0.1
 djangocms-forms==0.2.5
 djangocms-snippet
+djangocms-rest-api
