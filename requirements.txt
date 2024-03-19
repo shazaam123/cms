@@ -1,3 +1,4 @@
+django
 django-cms
 djangocms-alias
 djangocms-text-ckeditor
@@ -14,7 +15,14 @@ djangocms-attributes-field
 djangocms-style
 django-frontify
 djangocms-versioning
-djangocms-file==3.0.1
-djangocms-forms==0.2.5
+six
+djangocms-file
 djangocms-snippet
-djangocms-rest-api
+djangocms-link-all
+wagtail
+djangocms-history
+djangocms-icon
+aldryn-boilerplates
+django-jsonfield-backport
+djangocms-picture
+djangocms-maps
