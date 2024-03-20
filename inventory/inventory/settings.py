@@ -31,15 +31,15 @@ SECRET_KEY = "django-insecure-5d@gwyyhvg-uf=z2x5ics55hm=^&#=px+l-i@49=(&)o473bn(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pnrdp6-8000.csb.app', '34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev']
+ALLOWED_HOSTS = ['pnrdp6-8000.csb.app', '34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev']
 
-ALDRYN_BOILERPLATE_NAME='bootstrap3'
+ALDRYN_BOILERPLATE_NAME='bootstrap5'
 
 CSRF_FAILUER_VIEW = 'myapp.views.my_csrf_failure_view'
 
 CSRF_TRUSTED_SECURE = True
 
-CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:3000/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080', 'https://2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev:8080/', 'https://2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev:8080']
+CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:3000/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080', 'https://2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev:8080/', 'https://2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev:8080', 'https://28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev:3000']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -86,9 +86,9 @@ DJANGOCMS_ICON_SETS = [
 DJANGOCMS_STYLE_TAGS = ['div', 'article', 'section', 'header', 'footer',
   'h1', 'h2', 'h3', 'h4', 'h5', 'h6']
 
-CMS_ENABLE_UPDATE_CHECK = True
+CMS_ENABLE_UPDATE_CHECK = False
 
-CMS_UPDATE_CHECK_TYPE = ('minor')
+CMS_UPDATE_CHECK_TYPE = ('patch')
 # Application definition
 
 INSTALLED_APPS = [
