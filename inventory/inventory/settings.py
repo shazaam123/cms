@@ -33,7 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['pnrdp6-8000.csb.app', '34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev']
 
-ALDRYN_BOILERPLATE_NAME='bootstrap5'
+ALDRYN_BOILERPLATE_NAME='bootstrap3'
 
 CSRF_FAILUER_VIEW = 'myapp.views.my_csrf_failure_view'
 
@@ -42,6 +42,10 @@ CSRF_TRUSTED_SECURE = True
 CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:3000/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080', 'https://2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev:8080/', 'https://2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev:8080', 'https://28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev:3000']
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 DJANGOCMS_SNIPPET_SEARCH = True
 
@@ -138,6 +142,8 @@ INSTALLED_APPS = [
   "djangocms_frontend.contrib.navigation",
   "djangocms_frontend.contrib.tabs",
   "djangocms_frontend.contrib.utilities",
+  "crispy_forms",
+  "crispy_bootstrap5"
 ]
 
 MIDDLEWARE = [
