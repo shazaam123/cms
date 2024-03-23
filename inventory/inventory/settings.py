@@ -31,7 +31,7 @@ SECRET_KEY = "django-insecure-5d@gwyyhvg-uf=z2x5ics55hm=^&#=px+l-i@49=(&)o473bn(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pnrdp6-8000.csb.app', '34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev']
+ALLOWED_HOSTS = ['pnrdp6-8000.csb.app', '34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev', '28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev', '28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev']
 
 ALDRYN_BOILERPLATE_NAME='bootstrap3'
 
@@ -39,7 +39,7 @@ CSRF_FAILUER_VIEW = 'myapp.views.my_csrf_failure_view'
 
 CSRF_TRUSTED_SECURE = True
 
-CSRF_TRUSTED_ORIGINS = ['https://pnrdp6-8000.csb.app', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:3000/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080/', 'https://34429d82-7df4-4a1e-b310-ec822ff338aa-00-whqoklrvw82m.spock.replit.dev:8080', 'https://2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev:8080/', 'https://2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypfd5alil.pike.replit.dev:8080', 'https://28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev:3000']
+CSRF_TRUSTED_ORIGINS = ['https://28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev:3001/', 'https://28d65abc-8bd2-417f-afea-464b0441f12e-00-1cc49z84jpayk.pike.replit.dev:3001']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -48,6 +48,19 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 DJANGOCMS_SNIPPET_SEARCH = True
+
+CMS_TEMPLATES = [
+    ('home.html', 'Home page template'),
+]
+
+CMS_COLOR_SCHEMES = [
+    ('default', 'Default'),
+    ('dark', 'Dark'),
+    ('light', 'Light'),
+    ('pink', 'Pink')
+]
+
+CMS_COLOR_SCHEME_TOGGLE = True
 
 DJANGOCMS_SNIPPET_THEME = 'github'
 DJANGOCMS_SNIPPET_MODE = 'html'
@@ -65,6 +78,18 @@ DJANGOCMS_STYLE_TEMPLATES = [
 DJANGOCMS_ICON_TEMPLATES = [
     ('svg', 'SVG template'),
 ]
+
+DJANGOCMS_FORMS_USE_HTML5_REQUIRED = False
+
+DJANGOCMS_FORMS_TEMPLATES = (
+    ('djangocms_forms/form_template/default.html', _('Default')),
+)
+
+DJANGOCMS_FORMS_WIDGET_CSS_CLASSES = {'__all__': ('form-control', ) }
+
+DJANGOCMS_FORMS_PLUGIN_NAME = _('Form')
+
+DJANGOCMS_FORMS_PLUGIN_MODULE = _('Generic')
 
 DJANGOCMS_ICON_SETS = [
   ('fontawesome5regular', 'far', 'Font Awesome 5 Regular', 'lastest'),
@@ -90,12 +115,25 @@ DJANGOCMS_ICON_SETS = [
 DJANGOCMS_STYLE_TAGS = ['div', 'article', 'section', 'header', 'footer',
   'h1', 'h2', 'h3', 'h4', 'h5', 'h6']
 
+CSRF_COOKIE_HTTPONLY = True
+
 CMS_ENABLE_UPDATE_CHECK = False
 
 CMS_UPDATE_CHECK_TYPE = ('patch')
+
+CKEDITOR_SETTINGS = {
+    'language': '{{ language }}',
+    'toolbar_HTMLField': [
+        ['Undo', 'Redo'],
+        ['ShowBlocks'],
+        ['Format', 'Styles'],
+    ],
+    'skin': 'moono-lisa',
+}
 # Application definition
 
 INSTALLED_APPS = [
+  "adminsortable",
   "aldryn_boilerplates",
   "django.contrib.admin",
   "djangocms_admin_style",
@@ -179,7 +217,8 @@ TEMPLATES = [
               "django.contrib.messages.context_processors.messages",
               "sekizai.context_processors.sekizai",
               "cms.context_processors.cms_settings",
-              "aldryn_boilerplates.context_processors.boilerplate"
+              "aldryn_boilerplates.context_processors.boilerplate",
+              "django.template.context_processors.static"
             ],
           "loaders": [
             "django.template.loaders.filesystem.Loader",
@@ -220,6 +259,22 @@ DJANGOCMS_ICON_SETS = [
 DJANGOCMS_PICTURE_TEMPLATES = [
     ('background', _('Background image')),
 ]
+
+DJANGOCMS_PICTURE_ALIGN = [
+    ('left', _('Align left')),
+    ('right', _('Align right')),
+    ('center', _('Align center')),
+    # Image float alignment options
+    ("start", _("Float left")),
+    ("end", _("Float right")),
+    # Vertical alignment options
+    ('top', _('Align top')),
+    ('middle', _('Align middle')),
+    ('bottom', _('Align Bottom')),
+    ('baseline', _('Align baseline')),
+]
+
+DJANGOCMS_PICTURE_NESTING = True
 
 
 THUMBNAIL_PROCESSORS = (
@@ -293,7 +348,8 @@ LANGUAGES = [
     ("mr", _("Marathi")),
     ("ta", _("Tamil")),
     ("te", _("Telugu")),
-    ("th", _("Thai"))
+    ("th", _("Thai")),
+    ("fil", _("Filipino"))
 ]
 
 TIME_ZONE = "UTC"

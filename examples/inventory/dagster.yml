@@ -1,0 +1,10 @@
+locations: 
+  - location_name: inventory
+    cloud_source:
+      package_name: inventory
+
+    telemetry:
+      enable: false
+
+    pipeline_selector:
+      pipeline_name: my_inventory_pipeline

@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+inventory/__init__.py
+inventory/assets.py
+inventory.egg-info/PKG-INFO
+inventory.egg-info/SOURCES.txt
+inventory.egg-info/dependency_links.txt
+inventory.egg-info/requires.txt
+inventory.egg-info/top_level.txt

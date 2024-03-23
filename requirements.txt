@@ -26,3 +26,4 @@ aldryn-boilerplates
 django-jsonfield-backport
 djangocms-picture
 djangocms-maps
+gpt3discord

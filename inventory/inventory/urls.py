@@ -44,7 +44,9 @@ urlpatterns = i18n_patterns(
   path('en/admin/cms/placeholder/move-plugin/', admin.site.urls, name='cms_placeholder_move_plugin'),
   path('en/admin/cms/placeholder/object/([0-9]+)/edit/([0-9]+)/', admin.site.urls, name='cms_placeholder_render_object_edit'),
   path('en/admin/cms/placeholder/object/([0-9]+)/structure/([0-9]+)/', admin.site.urls, name='cms_placeholder_render_object_structure'),
-  path('en/admin/cms/placeholder/object/([0-9]+)/preview/([0-9]+)/', admin.site.urls, name='cms_placeholder_render_object_preview')
+  path('en/admin/cms/placeholder/object/([0-9]+)/preview/([0-9]+)/', admin.site.urls, name='cms_placeholder_render_object_preview'),
+  path("favicon.ico", RedirectView.as_view(url="/static/favicon.ico", permanent=True)),
+  
 )
 
 if settings.DEBUG:

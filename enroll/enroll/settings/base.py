@@ -25,10 +25,18 @@ CSRF_TRUSTED_ORIGINS = ['https://2ba33202-f6d4-4903-9fe1-a1c849c4dbda-00-3fzuypf
 
 CSRF_FAILUER_VIEW = 'myapp.views.my_csrf_failure_view'
 
+OMNI_FORMS_CONTENT_TYPES = [
+    {'app_label': 'foo'},
+    {'app_label': 'bar', 'model': 'modelone'},
+    {'app_label': 'bar', 'model': 'modeltwo'},
+]
+
 
 # Application definition
 
 INSTALLED_APPS = [
+    "admin_list_controls",
+    "customforms",
     "home",
     "search",
     "wagtail.contrib.forms",
@@ -51,6 +59,24 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
+
+MODOBOA_APPS = (
+   'modoboa',
+   'modoboa.core',
+   'modoboa.lib',
+   'modoboa.admin',
+   'modoboa.transport',
+   'modoboa.relaydomains',
+   'modoboa.limits',
+   'modoboa.parameters',
+   'modoboa.dnstools',
+   'modoboa.policyd',
+   'modoboa.maillog',
+   'modoboa.dmarc',
+   'modoboa.pdfcredentials',
+   'modoboa.imap_migration',
+   'modoboa.postfix_autoreply',
+)
 
 MIDDLEWARE = [
   "django.contrib.sessions.middleware.SessionMiddleware",
