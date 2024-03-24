@@ -27,3 +27,4 @@ django-jsonfield-backport
 djangocms-picture
 djangocms-maps
 gpt3discord
+djangocms-form-builderdjangocms-utils
